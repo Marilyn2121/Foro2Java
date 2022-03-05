@@ -17,30 +17,29 @@ public class Tablets extends PC{
     public void ingresarTablet(){
         //cree solo una clase que hace todo por que no vi necesidad de crear otra si solo cuando se mande a llamar con esta funcion sera cuando se agrege a esta lista asi es como lo entendi
         PC tablet = new PC();
+        ArrayList clonelist = new ArrayList();
+        JOptionPane.showMessageDialog(null, "Presion aceptar para continuar y registar nuevos datos", "TODOPC", JOptionPane.DEFAULT_OPTION);
         
-        tabletsItems.add(tablet.getDiscoDuroCapacidad());
-        tabletsItems.add(tablet.getMemoria());
-        tabletsItems.add(tablet.getMicropocesador());
-        tabletsItems.add(tablet.getModelo());
-        tabletsItems.add(tablet.getFabricante());
-        tabletsItems.add(tablet.getDiagonalSizePantalla());
-        tabletsItems.add(tablet.getCapOres());
-        tabletsItems.add(tablet.getMemoriaNAND());
-        tabletsItems.add(tablet.getSistemaOperativo());
+        clonelist.add(tablet.getFabricante());
+        clonelist.add(tablet.getModelo());
+        clonelist.add(tablet.getMicropocesador());
+        clonelist.add(tablet.getDiagonalSizePantalla());
+        clonelist.add(tablet.getCapOres());       
+        clonelist.add(tablet.getMemoriaNAND());
+        clonelist.add(tablet.getSistemaOperativo());
         
-        //JOptionPane.showMessageDialog(null,desktopItems1.toString(),JOptionPane.INFORMATION_MESSAGE,null);
-        //no me sale quiero mandar a llamar de un solo al array no rl
-        
+        tabletsItems.add(clonelist.toArray());
+    
     }//fin crear lista
 
     public void mostrarTablet(){
-        
+        JOptionPane.showMessageDialog(null, "A continuacion se mostraran todas las tablets que han sido registrados", "TODOPC", JOptionPane.DEFAULT_OPTION);
+	for (int i=0; i<tabletsItems.size(); i++){
         JOptionPane.showMessageDialog(null,
-        tabletsItems.toString(),
-        "Tablet Datos",
+        tabletsItems.get(i),
+        "Dispositivo laptop #"+(i+1),
         JOptionPane.INFORMATION_MESSAGE,
         null);
-        
-    }//fin mostrar lista
-    
+    } 
+  }
 }

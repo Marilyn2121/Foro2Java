@@ -15,28 +15,30 @@ public class Laptops extends PC{
     ArrayList laptopsItems = new ArrayList();
 
     public void ingresarLaptop(){
-        //cree solo una clase que hace todo por que no vi necesidad de crear otra si solo cuando se mande a llamar con esta funcion sera cuando se agrege a esta lista asi es como lo entendi
         PC laptop = new PC();
+        ArrayList clonelist = new ArrayList();
+        JOptionPane.showMessageDialog(null, "Presion aceptar para continuar y registar nuevos datos", "TODOPC", JOptionPane.DEFAULT_OPTION);
         
-        laptopsItems.add(laptop.getDiscoDuroCapacidad());
-        laptopsItems.add(laptop.getMemoria());
-        laptopsItems.add(laptop.getMicropocesador());
-        laptopsItems.add(laptop.getModelo());
-        laptopsItems.add(laptop.getFabricante());
-        laptopsItems.add(laptop.getPantallaSize());
-        //JOptionPane.showMessageDialog(null,desktopItems1.toString(),JOptionPane.INFORMATION_MESSAGE,null);
-        //no me sale quiero mandar a llamar de un solo al array no rl
-        
+        clonelist.add(laptop.getFabricante());
+        clonelist.add(laptop.getModelo());
+        clonelist.add(laptop.getMicropocesador());
+        clonelist.add(laptop.getMemoria());
+        clonelist.add(laptop.getPantallaSize());        
+        clonelist.add(laptop.getDiscoDuroCapacidad());
+
+        laptopsItems.add(clonelist.toArray());
     }//fin crear lista
 
     public void mostrarLaptop(){
-        
+        JOptionPane.showMessageDialog(null, "A continuacion se mostraran todas las laptops que han sido registrados", "TODOPC", JOptionPane.DEFAULT_OPTION);
+	for (int i=0; i<laptopsItems.size(); i++){
         JOptionPane.showMessageDialog(null,
-        laptopsItems.toString(),
-        "Laptop Datos",
+        laptopsItems.get(i),
+        "Dispositivo laptop #"+(i+1),
         JOptionPane.INFORMATION_MESSAGE,
         null);
-        
+	}          
+  
     }//fin mostrar lista
     
 }

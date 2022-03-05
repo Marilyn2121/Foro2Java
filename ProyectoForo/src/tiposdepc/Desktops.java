@@ -12,33 +12,36 @@ import javax.swing.JOptionPane;
  * @author admin
  */
 public class Desktops extends PC{
-    ArrayList desktopItems = new ArrayList();
 
+    ArrayList desktopItems = new ArrayList();
     public void ingresardesktop(){
         //cree solo una clase que hace todo por que no vi necesidad de crear otra si solo cuando se mande a llamar con esta funcion sera cuando se agrege a esta lista asi es como lo entendi
-        PC desktop1 = new PC();
+        PC desktop = new PC();
+        ArrayList clonelist = new ArrayList();
+        JOptionPane.showMessageDialog(null, "Presion aceptar para continuar y registar nuevos datos", "TODOPC", JOptionPane.DEFAULT_OPTION);
+
+        clonelist.add(desktop.getFabricante());     
+        clonelist.add(desktop.getModelo());  
+        clonelist.add(desktop.getMicropocesador());       
+        clonelist.add(desktop.getMemoria());        
+        clonelist.add(desktop.getTarjetaGrafica());        
+        clonelist.add(desktop.getTorreSize());       
+        clonelist.add(desktop.getDiscoDuroCapacidad());  
         
-        desktopItems.add(desktop1.getDiscoDuroCapacidad());
-        desktopItems.add(desktop1.getTorreSize());
-        desktopItems.add(desktop1.getTarjetaGrafica());
-        desktopItems.add(desktop1.getMemoria());
-        desktopItems.add(desktop1.getMicropocesador());
-        desktopItems.add(desktop1.getModelo());
-        desktopItems.add(desktop1.getFabricante());
-        
-        //JOptionPane.showMessageDialog(null,desktopItems1.toString(),JOptionPane.INFORMATION_MESSAGE,null);
-        //no me sale quiero mandar a llamar de un solo al array no rl
+        desktopItems.add(clonelist.toArray());
         
     }//fin crear lista
 
     public void mostrarDesktop(){
-        
+        JOptionPane.showMessageDialog(null, "A continuacion se mostraran todos los desktops que han sido registrados", "TODOPC", JOptionPane.DEFAULT_OPTION);
+	for (int i=0; i<desktopItems.size(); i++){
         JOptionPane.showMessageDialog(null,
-        desktopItems.toString(),
-        "Desktop Datos",
+        desktopItems.get(i),
+        "Dispositivo desktop #"+(i+1),
         JOptionPane.INFORMATION_MESSAGE,
         null);
-        
+	}          
+  
     }//fin mostrar lista
     
 }

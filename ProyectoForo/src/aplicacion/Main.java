@@ -1,10 +1,9 @@
-package aplicacion;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package aplicacion;
 import java.util.*;
 import javax.swing.*;
 import tiposdepc.Desktops;
@@ -12,7 +11,7 @@ import tiposdepc.Laptops;
 import tiposdepc.Tablets;
 /**
  *
- * @author Eveling Santos
+ * @author admin
  */
 public class Main {
 
@@ -26,8 +25,8 @@ public class Main {
         String indice3, msg, msg2;
         
         Desktops d=new Desktops();
-        Laptops c=new Laptops();
-        Tablets e= new Tablets();
+        Laptops l=new Laptops();
+        Tablets t= new Tablets();
         
         String[] equipos={
             "Desktops",
@@ -41,8 +40,7 @@ public class Main {
             "2- Ver equipos",
             "3- salir"
         };
-        
-        
+               
         //---------------------------------------Inicia Primer menu
         while(salir==1){
         do{
@@ -85,21 +83,21 @@ public class Main {
               d.ingresardesktop();
                break;
            case "0.1":
-               c.ingresarLaptop();
+               l.ingresarLaptop();
                break;
            case "0.2":
-               e.ingresarTablet();
+               t.ingresarTablet();
                break;
            case "1.0":
                d.mostrarDesktop();
                break;
            case "1.1":
-               c.mostrarLaptop();
+               l.mostrarLaptop();
                break;
            case "1.2":
-               e.mostrarTablet();
+               t.mostrarTablet();
                break;
-               
+            
        }
     }
 }
