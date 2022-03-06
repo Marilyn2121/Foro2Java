@@ -20,7 +20,7 @@ public class PC {
     //getters
     //
     public String getFabricante() {
-        fabricante = JOptionPane.showInputDialog("Inserte el fabricante del Dispositivo");
+        fabricante = JOptionPane.showInputDialog("Inserte el fabricante del dispositivo");
         while(fabricante.isEmpty()){
         fabricante = JOptionPane.showInputDialog(null,"El fabricante del dispositivo no fue ingresado intente de nuevo", " Error ", JOptionPane.WARNING_MESSAGE);
         }
@@ -28,7 +28,7 @@ public class PC {
     }
 
     public String getModelo() {
-        modelo = JOptionPane.showInputDialog("Inserte el modelo del Dispositivo");
+        modelo = JOptionPane.showInputDialog("Inserte el modelo del dispositivo");
         while(modelo.isEmpty()){
         modelo = JOptionPane.showInputDialog(null,"El modelo del dispositivo no fue ingresado intente de nuevo", " Error ", JOptionPane.WARNING_MESSAGE);
         }
@@ -36,7 +36,7 @@ public class PC {
     }
 
     public String getMicropocesador() {
-        micropocesador = JOptionPane.showInputDialog("Inserte el micropocesador del Dispositivo");
+        micropocesador = JOptionPane.showInputDialog("Inserte el micropocesador del dispositivo");
         while(micropocesador.isEmpty()){
         micropocesador = JOptionPane.showInputDialog(null,"El micropocesador no fue ingresado intente de nuevo", " Error ", JOptionPane.WARNING_MESSAGE);
         }
@@ -45,7 +45,7 @@ public class PC {
 
 
     public String getMemoria() {
-        memoria = JOptionPane.showInputDialog("Inserte la memoria del Dispositivo");
+        memoria = JOptionPane.showInputDialog("Inserte la memoria del dispositivo");
         while(memoria.isEmpty()){
         memoria = JOptionPane.showInputDialog(null,"La memoria del dispositivo no fue ingresado intente de nuevo", " Error ", JOptionPane.WARNING_MESSAGE);
         }
@@ -61,7 +61,7 @@ public class PC {
     }
 
     public String getTorreSize() {
-        torreSize = JOptionPane.showInputDialog("Inserte el tamaño de torre del Dispositivo");
+        torreSize = JOptionPane.showInputDialog("Inserte el tamaño de torre del dispositivo");
         while(torreSize.isEmpty()){
         torreSize = JOptionPane.showInputDialog(null,"El tamaño del dispositivo no fue ingresado intente de nuevo", " Error ", JOptionPane.WARNING_MESSAGE);
         }
@@ -69,7 +69,7 @@ public class PC {
     }
 
     public String getDiscoDuroCapacidad() {
-        discoDuroCapacidad = JOptionPane.showInputDialog("Inserte la capacidad del disco duro del Dispositivo");
+        discoDuroCapacidad = JOptionPane.showInputDialog("Inserte la capacidad del disco duro del dispositivo");
         while(discoDuroCapacidad.isEmpty()){
         discoDuroCapacidad = JOptionPane.showInputDialog(null,"La capacidad del disco duro no fue ingresado intente de nuevo", " Error ", JOptionPane.WARNING_MESSAGE);
         }
@@ -77,7 +77,7 @@ public class PC {
     }
 
     public String getPantallaSize() {
-        pantallaSize = JOptionPane.showInputDialog("Inserte el tamaño de la pantalla del Dispositivo");
+        pantallaSize = JOptionPane.showInputDialog("Inserte el tamaño de la pantalla del dispositivo");
         while(pantallaSize.isEmpty()){
         pantallaSize = JOptionPane.showInputDialog(null,"El tamaño de la pantalla no fue ingresado intente de nuevo", " Error ", JOptionPane.WARNING_MESSAGE);
         }
@@ -103,7 +103,7 @@ public class PC {
     }
 
     public String getMemoriaNAND() {
-        memoriaNAND = JOptionPane.showInputDialog("Inserte el tamaño de la memoria NAND del Dispositivo");
+        memoriaNAND = JOptionPane.showInputDialog("Inserte el tamaño de la memoria NAND del dispositivo");
         while(memoriaNAND.isEmpty()){
         memoriaNAND = JOptionPane.showInputDialog(null,"El tamaño de la memoria NAND no fue ingresado intente de nuevo", " Error ", JOptionPane.WARNING_MESSAGE);
         }
@@ -111,7 +111,7 @@ public class PC {
     }
 
     public String getSistemaOperativo() {
-        sistemaOperativo = JOptionPane.showInputDialog("Inserte el sistema operativo del Dispositivo");
+        sistemaOperativo = JOptionPane.showInputDialog("Inserte el sistema operativo del dispositivo");
         while(sistemaOperativo.isEmpty()){
         sistemaOperativo = JOptionPane.showInputDialog(null,"El sistema operativo no fue ingresado intente de nuevo", " Error ", JOptionPane.WARNING_MESSAGE);
         }

@@ -15,16 +15,16 @@ public class Laptops extends PC{
     ArrayList laptopsItems = new ArrayList();
 
     public void ingresarLaptop(){
-        PC laptop = new PC();
+
         ArrayList clonelist = new ArrayList();
         JOptionPane.showMessageDialog(null, "Presion aceptar para continuar y registar nuevos datos", "TODOPC", JOptionPane.DEFAULT_OPTION);
         
-        clonelist.add(laptop.getFabricante());
-        clonelist.add(laptop.getModelo());
-        clonelist.add(laptop.getMicropocesador());
-        clonelist.add(laptop.getMemoria());
-        clonelist.add(laptop.getPantallaSize());        
-        clonelist.add(laptop.getDiscoDuroCapacidad());
+        clonelist.add(super.getFabricante());
+        clonelist.add(super.getModelo());
+        clonelist.add(super.getMicropocesador());
+        clonelist.add(super.getMemoria());
+        clonelist.add(super.getPantallaSize());        
+        clonelist.add(super.getDiscoDuroCapacidad());
 
         laptopsItems.add(clonelist.toArray());
     }//fin crear lista
